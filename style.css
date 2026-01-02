@@ -393,9 +393,7 @@ footer {
     }
 
     .diagrama-kanban {
-    width: 100px;        
-    max-width: 100%;     
-    height: auto;        
+    width: 100px;                   
     display: block;
     margin: 20px auto;   
 }
