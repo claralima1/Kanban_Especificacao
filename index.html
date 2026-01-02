@@ -1,185 +1,122 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Kanban - Especificação</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1><i class="fas fa-project-diagram"></i> Uso do processo Kanban no PDS Corporativo</h1>
-                <p class="subtitle">Gestão visual de fluxo de trabalho para o PDS Corporativo</p>
-            </div>
-            <div class="header-decoration">
-                <div class="decoration-circle"></div>
-                <div class="decoration-circle"></div>
-                <div class="decoration-circle"></div>
-            </div>
-        </header>
-
-        <main>
-            <section class="intro-section">
-                <h2><i class="fas fa-play-circle"></i> Introdução</h2>
-                <div class="card modern-card">
-                    <p>
-                        O Kanban é uma estratégia de gestão visual de fluxo de trabalho que ajuda
-                        equipes a equilibrar a demanda com a capacidade disponível. Ao contrário
-                        de métodos prescritivos, ele foca na melhoria contínua do processo existente
-                        sem mudar drasticamente a estrutura da equipe.
-                    </p>
-                </div>
-            </section>
-            
-            <section class="objectives-section">
-                <h2><i class="fas fa-bullseye"></i> Objetivos Principais</h2>
-                <div class="card modern-card">
-                    <div class="objectives-grid">
-                        <div class="objective-item">
-                            <div class="objective-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div>
-                                <h3>Visualizar o Trabalho</h3>
-                                <p>Tornar o fluxo invisível de software em algo concreto através de quadros.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="objective-item">
-                            <div class="objective-icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <div>
-                                <h3>Limitar o Trabalho em Progresso (WIP)</h3>
-                                <p>Evitar sobrecarga e garantir que as tarefas sejam finalizadas.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="objective-item">
-                            <div class="objective-icon">
-                                <i class="fas fa-stream"></i>
-                            </div>
-                            <div>
-                                <h3>Gerenciar o Fluxo</h3>
-                                <p>Focar na velocidade e qualidade com que uma ideia gera valor ao cliente.</p>
-                            </div>
-                        </div>
+<section class="process-section">
+    <h2><i class="fas fa-sitemap"></i> Descrição das Atividades do Processo</h2>
+    <div class="kanban-container">
+        <div class="process-flow">
+            <div class="flow-line"></div>
+            <div class="kanban-grid">
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">1</div>
+                        <h3>Recebimento de Tarefas</h3>
                     </div>
-            
-                </div>
-            </section>
-            <section>
-                <h2 class="diagrama-kanban">Diagrama de Atividades</h2>
-                <img src="imagens/Diagrama_de_Atividades-Kanban.svg" alt="Diagrama do processo Kanban" class="diagrama">
-            </section>
-            <section class="process-section">
-                <h2><i class="fas fa-sitemap"></i> Descrição das Atividades do Processo</h2>
-                <div class="kanban-container">
-                    <div class="process-flow">
-                        <div class="flow-line"></div>
-                        <div class="kanban-grid">
-                            <div class="kanban-card">
-                                <div class="card-header">
-                                    <div class="card-number">1</div>
-                                    <h3>Gestão de Backlog</h3>
-                                </div>
-                                <div class="card-content">
-                                    <p><strong>O que ocorre:</strong> Identificação de necessidades, análise de viabilidade e priorização das demandas.</p>
-                                    <p><strong>Ação da Gerência:</strong> Evitar sobrecarga com itens irrelevantes ou mal definidos.</p>
-                                </div>
-                                <div class="card-icon">
-                                    <i class="fas fa-list-ol"></i>
-                                </div>
-                            </div>
-
-                            <div class="kanban-card">
-                                <div class="card-header">
-                                    <div class="card-number">2</div>
-                                    <h3>Análise e Refinamento</h3>
-                                </div>
-                                <div class="card-content">
-                                    <p><strong>O que ocorre:</strong> Detalhamento de requisitos, protótipos e critérios de aceite.</p>
-                                    <p><strong>Ponto de Controle:</strong> O item só avança quando atende ao DoR (Definition of Ready).</p>
-                                </div>
-                                <div class="card-icon">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                            </div>
-
-                            <div class="kanban-card">
-                                <div class="card-header">
-                                    <div class="card-number">3</div>
-                                    <h3>Desenvolvimento</h3>
-                                </div>
-                                <div class="card-content">
-                                    <p><strong>O que ocorre:</strong> Escrita do código, testes unitários e implementação.</p>
-                                    <p><strong>Qualidade:</strong> Code Review antes do envio para testes.</p>
-                                </div>
-                                <div class="card-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                            </div>
-
-                            <div class="kanban-card">
-                                <div class="card-header">
-                                    <div class="card-number">4</div>
-                                    <h3>Testes e QA</h3>
-                                </div>
-                                <div class="card-content">
-                                    <p><strong>O que ocorre:</strong> Testes funcionais, de integração e regressão.</p>
-                                    <p><strong>Loop de Correção:</strong> Bugs retornam para desenvolvimento.</p>
-                                </div>
-                                <div class="card-icon">
-                                    <i class="fas fa-vial"></i>
-                                </div>
-                            </div>
-
-                            <div class="kanban-card">
-                                <div class="card-header">
-                                    <div class="card-number">5</div>
-                                    <h3>Implantação</h3>
-                                </div>
-                                <div class="card-content">
-                                    <p><strong>O que ocorre:</strong> Configuração de servidores e liberação ao usuário final.</p>
-                                    <p><strong>Automação:</strong> Uso de pipelines CI/CD.</p>
-                                </div>
-                                <div class="card-icon">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                            </div>
-
-                            <div class="kanban-card">
-                                <div class="card-header">
-                                    <div class="card-number">6</div>
-                                    <h3>Monitoramento e Encerramento</h3>
-                                </div>
-                                <div class="card-content">
-                                    <p><strong>O que ocorre:</strong> Monitoramento da estabilidade e coleta de feedback.</p>
-                                    <p><strong>Gerência:</strong> Análise de métricas como Lead Time.</p>
-                                </div>
-                                <div class="card-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Novas tarefas são recebidas e inseridas no sistema para análise.</p>
+                        <p><strong>Ação da Equipe:</strong> Registrar as tarefas de forma clara para garantir o entendimento futuro.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-inbox"></i>
                     </div>
                 </div>
-            </section>
-        </main>
 
-        <footer>
-            <div class="footer-content">
-                <div>
-                    <p>&copy; 2026 - Kanban - Especificação para uso no PDS Corporativo</p>
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">2</div>
+                        <h3>Priorização e Organização</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> As tarefas são avaliadas e organizadas segundo prioridades e valor de negócio.</p>
+                        <p><strong>Objetivo:</strong> Garantir que as tarefas mais importantes sejam executadas primeiro.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-sort-amount-up"></i>
+                    </div>
                 </div>
-               
+
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">3</div>
+                        <h3>Backlog</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Tarefas aguardam para serem selecionadas para execução.</p>
+                        <p><strong>Ação:</strong> Manter o backlog organizado, evitando acúmulo de itens irrelevantes.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">4</div>
+                        <h3>Execução</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Tarefa é movida para “Em andamento” e a equipe começa a trabalhar nela.</p>
+                        <p><strong>Foco:</strong> Desenvolver e implementar a tarefa conforme especificado.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">5</div>
+                        <h3>Testes e Validação</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Realização de testes para garantir qualidade e funcionamento da tarefa.</p>
+                        <p><strong>Feedback:</strong> Caso a tarefa não passe nos testes, ela retorna para correções.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">6</div>
+                        <h3>Implantação</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Tarefa é implantada em produção após aprovação nos testes.</p>
+                        <p><strong>Objetivo:</strong> Disponibilizar a funcionalidade para os usuários finais.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">7</div>
+                        <h3>Coleta de Feedback</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Usuários fornecem feedback sobre a funcionalidade implantada.</p>
+                        <p><strong>Próximos passos:</strong> Se necessário, a tarefa pode ser reaberta para ajustes ou melhorias.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                </div>
+
+                <div class="kanban-card">
+                    <div class="card-header">
+                        <div class="card-number">8</div>
+                        <h3>Reavaliação e Encerramento</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>O que ocorre:</strong> Avaliação do feedback para decidir se ajustes são necessários.</p>
+                        <p><strong>Resultado:</strong> Tarefa encerrada caso não haja necessidade de revisões.</p>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+
             </div>
-        </footer>
+        </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+</section>
