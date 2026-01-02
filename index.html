@@ -4,87 +4,189 @@
     <meta charset="UTF-8">
     <title>Kanban - Ciclo de Vida de Software</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>Ciclo de Vida de Software com Kanban</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Introdução</h2>
-            <p>
-                O Kanban é uma estratégia de gestão visual de fluxo de trabalho que ajuda
-                equipes a equilibrar a demanda com a capacidade disponível. Ao contrário
-                de métodos prescritivos, ele foca na melhoria contínua do processo existente
-                sem mudar drasticamente a estrutura da equipe.
-            </p>
-        </section>
-        <section>
-            <h2>Objetivos Principais</h2>
-            <ul>
-                <li><strong>Visualizar o Trabalho:</strong> Tornar o fluxo invisível de software em algo concreto através de quadros.</li>
-                <li><strong>Limitar o Trabalho em Progresso (WIP):</strong> Evitar sobrecarga e garantir que as tarefas sejam finalizadas.</li>
-                <li><strong>Gerenciar o Fluxo:</strong> Focar na velocidade e qualidade com que uma ideia gera valor ao cliente.</li>
-            </ul>
-            <p>
-                Este projeto apresenta um Ciclo de Vida de Software baseado em Kanban,
-                detalhando desde a gestão estratégica até a implantação final.
-            </p>
-        </section>
-
-        <section>
-            <h2>Descrição das Atividades do Processo</h2>
-
-            <div class="kanban">
-
-                <div class="card">
-                    <h3>1. Gestão de Backlog</h3>
-                    <p><strong>O que ocorre:</strong> Identificação de necessidades, análise de viabilidade e priorização das demandas.</p>
-                    <p><strong>Ação da Gerência:</strong> Evitar sobrecarga com itens irrelevantes ou mal definidos.</p>
-                </div>
-
-                <div class="card">
-                    <h3>2. Análise e Refinamento</h3>
-                    <p><strong>O que ocorre:</strong> Detalhamento de requisitos, protótipos e critérios de aceite.</p>
-                    <p><strong>Ponto de Controle:</strong> O item só avança quando atende ao DoR (Definition of Ready).</p>
-                </div>
-
-                <div class="card">
-                    <h3>3. Desenvolvimento</h3>
-                    <p><strong>O que ocorre:</strong> Escrita do código, testes unitários e implementação.</p>
-                    <p><strong>Qualidade:</strong> Code Review antes do envio para testes.</p>
-                </div>
-
-                <div class="card">
-                    <h3>4. Testes e QA</h3>
-                    <p><strong>O que ocorre:</strong> Testes funcionais, de integração e regressão.</p>
-                    <p><strong>Loop de Correção:</strong> Bugs retornam para desenvolvimento.</p>
-                </div>
-
-                <div class="card">
-                    <h3>5. Implantação</h3>
-                    <p><strong>O que ocorre:</strong> Configuração de servidores e liberação ao usuário final.</p>
-                    <p><strong>Automação:</strong> Uso de pipelines CI/CD.</p>
-                </div>
-
-                <div class="card">
-                    <h3>6. Monitoramento e Encerramento</h3>
-                    <p><strong>O que ocorre:</strong> Monitoramento da estabilidade e coleta de feedback.</p>
-                    <p><strong>Gerência:</strong> Análise de métricas como Lead Time.</p>
-                </div>
-
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-project-diagram"></i> Ciclo de Vida de Software com Kanban</h1>
+                <p class="subtitle">Gestão visual de fluxo de trabalho para desenvolvimento ágil e eficiente</p>
             </div>
-        </section>
-    </main>
+            <div class="header-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-circle"></div>
+                <div class="decoration-circle"></div>
+            </div>
+        </header>
 
-    <footer>
-        <p>&copy; 2026 - Projeto Kanban</p>
-        <button onclick="mostrarMensagem()">Clique aqui</button>
-    </footer>
+        <main>
+            <section class="intro-section">
+                <h2><i class="fas fa-play-circle"></i> Introdução</h2>
+                <div class="card modern-card">
+                    <p>
+                        O Kanban é uma estratégia de gestão visual de fluxo de trabalho que ajuda
+                        equipes a equilibrar a demanda com a capacidade disponível. Ao contrário
+                        de métodos prescritivos, ele foca na melhoria contínua do processo existente
+                        sem mudar drasticamente a estrutura da equipe.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="objectives-section">
+                <h2><i class="fas fa-bullseye"></i> Objetivos Principais</h2>
+                <div class="card modern-card">
+                    <div class="objectives-grid">
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div>
+                                <h3>Visualizar o Trabalho</h3>
+                                <p>Tornar o fluxo invisível de software em algo concreto através de quadros.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div>
+                                <h3>Limitar o Trabalho em Progresso (WIP)</h3>
+                                <p>Evitar sobrecarga e garantir que as tarefas sejam finalizadas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="objective-item">
+                            <div class="objective-icon">
+                                <i class="fas fa-stream"></i>
+                            </div>
+                            <div>
+                                <h3>Gerenciar o Fluxo</h3>
+                                <p>Focar na velocidade e qualidade com que uma ideia gera valor ao cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-summary">
+                        <p>
+                            Este projeto apresenta um Ciclo de Vida de Software baseado em Kanban,
+                            detalhando desde a gestão estratégica até a implantação final.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="process-section">
+                <h2><i class="fas fa-sitemap"></i> Descrição das Atividades do Processo</h2>
+                <div class="kanban-container">
+                    <div class="process-flow">
+                        <div class="flow-line"></div>
+                        <div class="kanban-grid">
+                            <div class="kanban-card">
+                                <div class="card-header">
+                                    <div class="card-number">1</div>
+                                    <h3>Gestão de Backlog</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p><strong>O que ocorre:</strong> Identificação de necessidades, análise de viabilidade e priorização das demandas.</p>
+                                    <p><strong>Ação da Gerência:</strong> Evitar sobrecarga com itens irrelevantes ou mal definidos.</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-list-ol"></i>
+                                </div>
+                            </div>
+
+                            <div class="kanban-card">
+                                <div class="card-header">
+                                    <div class="card-number">2</div>
+                                    <h3>Análise e Refinamento</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p><strong>O que ocorre:</strong> Detalhamento de requisitos, protótipos e critérios de aceite.</p>
+                                    <p><strong>Ponto de Controle:</strong> O item só avança quando atende ao DoR (Definition of Ready).</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </div>
+
+                            <div class="kanban-card">
+                                <div class="card-header">
+                                    <div class="card-number">3</div>
+                                    <h3>Desenvolvimento</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p><strong>O que ocorre:</strong> Escrita do código, testes unitários e implementação.</p>
+                                    <p><strong>Qualidade:</strong> Code Review antes do envio para testes.</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                            </div>
+
+                            <div class="kanban-card">
+                                <div class="card-header">
+                                    <div class="card-number">4</div>
+                                    <h3>Testes e QA</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p><strong>O que ocorre:</strong> Testes funcionais, de integração e regressão.</p>
+                                    <p><strong>Loop de Correção:</strong> Bugs retornam para desenvolvimento.</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-vial"></i>
+                                </div>
+                            </div>
+
+                            <div class="kanban-card">
+                                <div class="card-header">
+                                    <div class="card-number">5</div>
+                                    <h3>Implantação</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p><strong>O que ocorre:</strong> Configuração de servidores e liberação ao usuário final.</p>
+                                    <p><strong>Automação:</strong> Uso de pipelines CI/CD.</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                            </div>
+
+                            <div class="kanban-card">
+                                <div class="card-header">
+                                    <div class="card-number">6</div>
+                                    <h3>Monitoramento e Encerramento</h3>
+                                </div>
+                                <div class="card-content">
+                                    <p><strong>O que ocorre:</strong> Monitoramento da estabilidade e coleta de feedback.</p>
+                                    <p><strong>Gerência:</strong> Análise de métricas como Lead Time.</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2026 - Projeto Kanban - Ciclo de Vida de Software</p>
+                    <p class="footer-tagline">Desenvolvimento Ágil e Eficiente</p>
+                </div>
+                <div class="footer-action">
+                    <button class="modern-button" onclick="mostrarMensagem()">
+                        <i class="fas fa-hand-pointer"></i> Clique para saber mais
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
