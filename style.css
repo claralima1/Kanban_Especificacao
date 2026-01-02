@@ -393,11 +393,11 @@ footer {
     }
 
     .diagrama-kanban {
-    width: 400px;        /* tamanho fixo */
-    max-width: 100%;     /* evita quebrar em celular */
-    height: auto;        /* mantém proporção */
+    width: 100px;        
+    max-width: 100%;     
+    height: auto;        
     display: block;
-    margin: 20px auto;   /* centraliza */
+    margin: 20px auto;   
 }
 
 }
