@@ -391,4 +391,13 @@ footer {
     .kanban-grid {
         grid-template-columns: 1fr;
     }
+
+    .diagrama-kanban {
+    width: 400px;        /* tamanho fixo */
+    max-width: 100%;     /* evita quebrar em celular */
+    height: auto;        /* mantém proporção */
+    display: block;
+    margin: 20px auto;   /* centraliza */
+}
+
 }
