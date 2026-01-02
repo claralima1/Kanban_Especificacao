@@ -2,42 +2,90 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Kanban - PDS Corporativo</title>
-
-    <!-- Responsividade -->
+    <title>Kanban - Ciclo de Vida de Software</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS externo (opcional) -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <header>
-        <h1>Kanban - Especificação para uso no PDS Corporativo</h1>
-        <nav>
-            <a href="#">Introdução</a> |
-            <a href="#">Diagrama de Atividades</a> |
-            <a href="#">Papéis</a>
-            <a href="#">Práticas Ágeis</a>
-        </nav>
+        <h1>Ciclo de Vida de Software com Kanban</h1>
     </header>
 
-    <!-- Conteúdo principal -->
     <main>
         <section>
             <h2>Introdução</h2>
-            <p>Conteúdo da página vai aqui.</p>
+            <p>
+                O Kanban é uma estratégia de gestão visual de fluxo de trabalho que ajuda
+                equipes a equilibrar a demanda com a capacidade disponível. Ao contrário
+                de métodos prescritivos, ele foca na melhoria contínua do processo existente
+                sem mudar drasticamente a estrutura da equipe.
+            </p>
+        </section>
+        <section>
+            <h2>Objetivos Principais</h2>
+            <ul>
+                <li><strong>Visualizar o Trabalho:</strong> Tornar o fluxo invisível de software em algo concreto através de quadros.</li>
+                <li><strong>Limitar o Trabalho em Progresso (WIP):</strong> Evitar sobrecarga e garantir que as tarefas sejam finalizadas.</li>
+                <li><strong>Gerenciar o Fluxo:</strong> Focar na velocidade e qualidade com que uma ideia gera valor ao cliente.</li>
+            </ul>
+            <p>
+                Este projeto apresenta um Ciclo de Vida de Software baseado em Kanban,
+                detalhando desde a gestão estratégica até a implantação final.
+            </p>
+        </section>
+
+        <section>
+            <h2>Descrição das Atividades do Processo</h2>
+
+            <div class="kanban">
+
+                <div class="card">
+                    <h3>1. Gestão de Backlog</h3>
+                    <p><strong>O que ocorre:</strong> Identificação de necessidades, análise de viabilidade e priorização das demandas.</p>
+                    <p><strong>Ação da Gerência:</strong> Evitar sobrecarga com itens irrelevantes ou mal definidos.</p>
+                </div>
+
+                <div class="card">
+                    <h3>2. Análise e Refinamento</h3>
+                    <p><strong>O que ocorre:</strong> Detalhamento de requisitos, protótipos e critérios de aceite.</p>
+                    <p><strong>Ponto de Controle:</strong> O item só avança quando atende ao DoR (Definition of Ready).</p>
+                </div>
+
+                <div class="card">
+                    <h3>3. Desenvolvimento</h3>
+                    <p><strong>O que ocorre:</strong> Escrita do código, testes unitários e implementação.</p>
+                    <p><strong>Qualidade:</strong> Code Review antes do envio para testes.</p>
+                </div>
+
+                <div class="card">
+                    <h3>4. Testes e QA</h3>
+                    <p><strong>O que ocorre:</strong> Testes funcionais, de integração e regressão.</p>
+                    <p><strong>Loop de Correção:</strong> Bugs retornam para desenvolvimento.</p>
+                </div>
+
+                <div class="card">
+                    <h3>5. Implantação</h3>
+                    <p><strong>O que ocorre:</strong> Configuração de servidores e liberação ao usuário final.</p>
+                    <p><strong>Automação:</strong> Uso de pipelines CI/CD.</p>
+                </div>
+
+                <div class="card">
+                    <h3>6. Monitoramento e Encerramento</h3>
+                    <p><strong>O que ocorre:</strong> Monitoramento da estabilidade e coleta de feedback.</p>
+                    <p><strong>Gerência:</strong> Análise de métricas como Lead Time.</p>
+                </div>
+
+            </div>
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 - Kanban - Especificação para uso no PDS Corporativo</p>
+        <p>&copy; 2026 - Projeto Kanban</p>
+        <button onclick="mostrarMensagem()">Clique aqui</button>
     </footer>
 
-    <!-- JavaScript externo (opcional) -->
-    <!-- <script src="script.js"></script> -->
-
+    <script src="script.js"></script>
 </body>
 </html>
